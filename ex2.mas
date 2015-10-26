@@ -1,0 +1,16 @@
+	Input Alt
+	Store 	x 
+	Add 	x  
+	Store 	x2
+	Add 	x2
+	Store 	x4 
+	Add 	x4
+	Store 	x8 
+	ADD		x2
+	PUT
+	CLEAR Alt
+x,	HEX		0
+x2,	HEX		0
+x4,	HEX		0
+x8,	HEX		0
+	
