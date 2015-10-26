@@ -62,7 +62,7 @@
 
 
 /* Copy the first part of user declarations.  */
-#line 1 "maspar.y" /* yacc.c:339  */
+// #line 1 "maspar.y" /* yacc.c:339  */
 
 //---------------------------------------------------------------------
 //File maspar.y contains a specification for MARIE Assembler Language 
@@ -84,7 +84,8 @@
 using namespace std;
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
-//Application inlcude files
+//Application inlcude files   
+//ggggg
 //---------------------------------------------------------------------
 #include "maslex.h"
 #include "maspar.h"
