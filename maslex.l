@@ -133,22 +133,14 @@ Lexer::Lexer(FILE* i)
     { "TOKEN_BEGIN"
     , "COMMA"
     , "RESERVE_WORDS"
-    , "JNS" 
     , "LOAD"
     , "STORE"
+    , "JUMP"
+    , "SKIP"    
     , "ADD"
     , "SUBT"
-    , "INPUT"
-    , "OUTPUT"
-    , "HALT"
-    , "SKIPCOND"
-    , "JUMP"
+    , "PUT"
     , "CLEAR"
-    , "ADDI"
-    , "JUMPI"
-    , "LOADI"
-    , "STOREI"
-    , "DEC"
     , "HEX"
     , "ORG"
     , "REGULAR_EXPRESSIONS"
@@ -160,43 +152,27 @@ Lexer::Lexer(FILE* i)
     for (int a=0;a<MAXSY;a++) TokenName[a]=sy[a];
     static string rw[]=
     {
-     "jns"       
-    ,"load"      
-    ,"store"      
+     "load"      
+    ,"store" 
+    ,"jump" 
+    ,"skip"               
     ,"add"
     ,"subt"         
-    ,"input"  
-    ,"output"        
-    ,"halt"
-    ,"skipcond"         
-    ,"jump"  
-    ,"clear"        
-    ,"addi"         
-    ,"jumpi"
-    ,"loadi"
-    ,"storei"    
-    ,"dec"
+    ,"put"  
+    ,"clear"  
     ,"hex"
     ,"org"
     };
     static int    tc[]=
     {
-      JNS       
-    , LOAD      
-    , STORE      
+      LOAD      
+    , STORE  
+    , JUMP  
+    , SKIP     
     , ADD      
     , SUBT        
-    , INPUT       
-    , OUTPUT      
-    , HALT   
-    , SKIPCOND
-    , JUMP   
+    , PUT       
     , CLEAR       
-    , ADDI      
-    , JUMPI       
-    , LOADI  
-    , STOREI    
-    , DEC     
     , HEX
     , ORG        
     };

@@ -56,22 +56,14 @@ Label LT;                    //Label Table for resolving the addresses of labels
 %token <token>   TOKEN_BEGIN
 %token <token>   COMMA
 %token <token>   RESERVE_WORDS
-%token <token>   JNS
 %token <token>   LOAD
 %token <token>   STORE
+%token <token>   JUMP
+%token <token>   SKIP
 %token <token>   ADD
 %token <token>   SUBT
-%token <token>   INPUT
-%token <token>   OUTPUT
-%token <token>   HALT
-%token <token>   SKIPCOND
-%token <token>   JUMP
+%token <token>   PUT
 %token <token>   CLEAR
-%token <token>   ADDI
-%token <token>   JUMPI
-%token <token>   LOADI
-%token <token>   STOREI
-%token <token>   DEC
 %token <token>   HEX
 %token <token>   ORG
 %token <token>   REGULAR_EXPRESSIONS
@@ -184,80 +176,34 @@ instruction:
 instruction:
   PUT
   {tfs << endl << "#018 instruction -> PUT"; 
-   unsigned short operation=op_input;
+   unsigned short operation=op_put;
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    Memory[address]=operation;
    tfs << dec;
-  }
-instruction:
-  HALT 
-  {tfs << endl << "#019 instruction -> HALT"; 
-   unsigned short operation=op_halt;
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   tfs << dec;
-   Memory[address]=operation;
   }
 instruction:
   CLEAR 
-  {tfs << endl << "#022 instruction -> CLEAR"; 
+  {tfs << endl << "#019 instruction -> CLEAR"; 
    unsigned short operation=op_clear;
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    tfs << dec;
    Memory[address]=operation;
-  } 
-instruction:
-  ADDI operand 
-  {tfs << endl << "#023 instruction -> ADDI operand"; 
-   unsigned short operation=op_addi|($2);
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   tfs << dec;
-   Memory[address]=operation;
-  } 
-instruction:
-  JUMPI operand 
-  {tfs << endl << "#024 instruction -> JUMPI operand"; 
-   unsigned short operation=op_jumpi|($2);
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   tfs << dec;
-   Memory[address]=operation;
-  } 
-instruction:
-  LOADI operand 
-  {tfs << endl << "#025 instruction -> LOADI operand"; 
-   unsigned short operation=op_loadi|($2);
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   tfs << dec;
-   Memory[address]=operation;
-  } 
-instruction:
-  STOREI operand 
-  {tfs << endl << "#026 instruction -> STOREI operand"; 
-   unsigned short operation=op_storei|($2);
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   tfs << dec;
-   Memory[address]=operation;
-  } 
+  }
 operand:
   HEXLIT
-  {tfs << endl << "#027 operand -> HEXLIT(" << (*$1) << ")"; 
+  {tfs << endl << "#020 operand -> HEXLIT(" << (*$1) << ")"; 
    $$=hextoint(*$1);
   } 
 operand:
   IDENTIFIER
-  {tfs << endl << "#028 operand -> IDENTIFIER"; 
+  {tfs << endl << "#021 operand -> IDENTIFIER"; 
    $$=LT.Reference(*$1,address);
   } 
 data_definition:
   HEX HEXLIT 
-  {tfs << endl << "#029 data_definition -> HEX HEXLIT(" << (*$2) << ")"; 
+  {tfs << endl << "#022 data_definition -> HEX HEXLIT(" << (*$2) << ")"; 
    tfs << endl << (*$2) << "=" << hextoint(*$2) << " decimal";
    Memory[address]=hextoint(*$2);
-  } 
-data_definition:
-  DEC HEXLIT 
-  {tfs << endl << "#030 data_definition -> DEC HEXLIT(" << (*$2) << ")"; 
-   tfs << endl << (*$2) << "=" << dectoint(*$2) << " decimal";
-   Memory[address]=dectoint(*$2);
   } 
 %%
 //-----------------------------------------------------------------------

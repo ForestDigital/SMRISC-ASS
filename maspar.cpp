@@ -62,7 +62,7 @@
 
 
 /* Copy the first part of user declarations.  */
-// #line 1 "maspar.y" /* yacc.c:339  */
+#line 1 "maspar.y" /* yacc.c:339  */
 
 //---------------------------------------------------------------------
 //File maspar.y contains a specification for MARIE Assembler Language 
@@ -84,8 +84,7 @@
 using namespace std;
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
-//Application inlcude files   
-//ggggg
+//Application inlcude files
 //---------------------------------------------------------------------
 #include "maslex.h"
 #include "maspar.h"
@@ -152,56 +151,40 @@ extern int yydebug;
     TOKEN_BEGIN = 258,
     COMMA = 259,
     RESERVE_WORDS = 260,
-    JNS = 261,
-    LOAD = 262,
-    STORE = 263,
-    ADD = 264,
-    SUBT = 265,
-    INPUT = 266,
-    OUTPUT = 267,
-    HALT = 268,
-    SKIPCOND = 269,
-    JUMP = 270,
-    CLEAR = 271,
-    ADDI = 272,
-    JUMPI = 273,
-    LOADI = 274,
-    STOREI = 275,
-    DEC = 276,
-    HEX = 277,
-    ORG = 278,
-    REGULAR_EXPRESSIONS = 279,
-    IDENTIFIER = 280,
-    HEXLIT = 281,
-    TOKEN_END = 282
+    LOAD = 261,
+    STORE = 262,
+    JUMP = 263,
+    SKIP = 264,
+    ADD = 265,
+    SUBT = 266,
+    PUT = 267,
+    CLEAR = 268,
+    HEX = 269,
+    ORG = 270,
+    REGULAR_EXPRESSIONS = 271,
+    IDENTIFIER = 272,
+    HEXLIT = 273,
+    TOKEN_END = 274
   };
 #endif
 /* Tokens.  */
 #define TOKEN_BEGIN 258
 #define COMMA 259
 #define RESERVE_WORDS 260
-#define JNS 261
-#define LOAD 262
-#define STORE 263
-#define ADD 264
-#define SUBT 265
-#define INPUT 266
-#define OUTPUT 267
-#define HALT 268
-#define SKIPCOND 269
-#define JUMP 270
-#define CLEAR 271
-#define ADDI 272
-#define JUMPI 273
-#define LOADI 274
-#define STOREI 275
-#define DEC 276
-#define HEX 277
-#define ORG 278
-#define REGULAR_EXPRESSIONS 279
-#define IDENTIFIER 280
-#define HEXLIT 281
-#define TOKEN_END 282
+#define LOAD 261
+#define STORE 262
+#define JUMP 263
+#define SKIP 264
+#define ADD 265
+#define SUBT 266
+#define PUT 267
+#define CLEAR 268
+#define HEX 269
+#define ORG 270
+#define REGULAR_EXPRESSIONS 271
+#define IDENTIFIER 272
+#define HEXLIT 273
+#define TOKEN_END 274
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -213,7 +196,7 @@ union YYSTYPE
   string* token;
   unsigned short integer;
 
-#line 216 "y.tab.c" /* yacc.c:355  */
+#line 200 "y.tab.c" /* yacc.c:355  */
 };
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
@@ -228,7 +211,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 231 "y.tab.c" /* yacc.c:358  */
+#line 215 "y.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -468,23 +451,23 @@ union yyalloc
 #endif /* !YYCOPY_NEEDED */
 
 /* YYFINAL -- State number of the termination state.  */
-#define YYFINAL  46
+#define YYFINAL  32
 /* YYLAST -- Last index in YYTABLE.  */
-#define YYLAST   54
+#define YYLAST   32
 
 /* YYNTOKENS -- Number of terminals.  */
-#define YYNTOKENS  28
+#define YYNTOKENS  20
 /* YYNNTS -- Number of nonterminals.  */
 #define YYNNTS  11
 /* YYNRULES -- Number of rules.  */
-#define YYNRULES  31
+#define YYNRULES  23
 /* YYNSTATES -- Number of states.  */
-#define YYNSTATES  49
+#define YYNSTATES  35
 
 /* YYTRANSLATE[YYX] -- Symbol number corresponding to YYX as returned
    by yylex, with out-of-bounds checking.  */
 #define YYUNDEFTOK  2
-#define YYMAXUTOK   282
+#define YYMAXUTOK   274
 
 #define YYTRANSLATE(YYX)                                                \
   ((unsigned int) (YYX) <= YYMAXUTOK ? yytranslate[YYX] : YYUNDEFTOK)
@@ -520,18 +503,16 @@ static const yytype_uint8 yytranslate[] =
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     1,     2,     3,     4,
        5,     6,     7,     8,     9,    10,    11,    12,    13,    14,
-      15,    16,    17,    18,    19,    20,    21,    22,    23,    24,
-      25,    26,    27
+      15,    16,    17,    18,    19
 };
 
 #if YYDEBUG
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
-static const yytype_uint16 yyrline[] =
+static const yytype_uint8 yyrline[] =
 {
-       0,    83,    83,    89,    93,    97,   101,   105,   109,   117,
-     121,   126,   132,   137,   145,   153,   161,   169,   177,   185,
-     193,   201,   209,   217,   225,   233,   241,   249,   257,   262,
-     267,   273
+       0,    75,    75,    81,    85,    89,    93,    97,   101,   109,
+     113,   118,   124,   129,   137,   145,   153,   161,   169,   177,
+     185,   193,   198,   203
 };
 #endif
 
@@ -541,9 +522,8 @@ static const yytype_uint16 yyrline[] =
 static const char *const yytname[] =
 {
   "$end", "error", "$undefined", "TOKEN_BEGIN", "COMMA", "RESERVE_WORDS",
-  "JNS", "LOAD", "STORE", "ADD", "SUBT", "INPUT", "OUTPUT", "HALT",
-  "SKIPCOND", "JUMP", "CLEAR", "ADDI", "JUMPI", "LOADI", "STOREI", "DEC",
-  "HEX", "ORG", "REGULAR_EXPRESSIONS", "IDENTIFIER", "HEXLIT", "TOKEN_END",
+  "LOAD", "STORE", "JUMP", "SKIP", "ADD", "SUBT", "PUT", "CLEAR", "HEX",
+  "ORG", "REGULAR_EXPRESSIONS", "IDENTIFIER", "HEXLIT", "TOKEN_END",
   "$accept", "program", "statement_list", "statement", "directive",
   "labeled_item", "label", "item", "instruction", "operand",
   "data_definition", YY_NULLPTR
@@ -556,8 +536,7 @@ static const char *const yytname[] =
 static const yytype_uint16 yytoknum[] =
 {
        0,   256,   257,   258,   259,   260,   261,   262,   263,   264,
-     265,   266,   267,   268,   269,   270,   271,   272,   273,   274,
-     275,   276,   277,   278,   279,   280,   281,   282
+     265,   266,   267,   268,   269,   270,   271,   272,   273,   274
 };
 # endif
 
@@ -575,11 +554,10 @@ static const yytype_uint16 yytoknum[] =
      STATE-NUM.  */
 static const yytype_int8 yypact[] =
 {
-      -6,    16,    16,    16,    16,    16,    -9,    -9,    -9,    16,
-      16,    -9,    16,    16,    16,    16,    -8,    17,    20,    47,
-      52,    -6,    -9,    -9,    -9,    14,    -9,    -9,    -9,    -9,
+      -6,     9,     9,     9,     9,     9,     9,    -9,    -9,    -8,
+      10,    25,    30,    -6,    -9,    -9,    -9,     6,    -9,    -9,
       -9,    -9,    -9,    -9,    -9,    -9,    -9,    -9,    -9,    -9,
-      -9,    -9,    -9,    -9,    -9,    -9,    -9,    -9,    -9
+      -9,    -9,    -9,    -9,    -9
 };
 
   /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -587,25 +565,24 @@ static const yytype_int8 yypact[] =
      means the default is an error.  */
 static const yytype_uint8 yydefact[] =
 {
-       0,     0,     0,     0,     0,     0,    18,    19,    20,     0,
-       0,    23,     0,     0,     0,     0,     0,     0,     0,     0,
-       0,     2,     3,     5,     6,     0,     7,    11,    12,    29,
-      28,    13,    14,    15,    16,    17,    21,    22,    24,    25,
-      26,    27,    31,    30,     8,    10,     1,     4,     9
+       0,     0,     0,     0,     0,     0,     0,    19,    20,     0,
+       0,     0,     0,     2,     3,     5,     6,     0,     7,    11,
+      12,    22,    21,    13,    14,    15,    16,    17,    18,    23,
+       8,    10,     1,     4,     9
 };
 
   /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int8 yypgoto[] =
 {
-      -9,    -9,    -9,    32,    -9,    -9,    -9,    29,    -9,    35,
+      -9,    -9,    -9,    18,    -9,    -9,    -9,    15,    -9,    19,
       -9
 };
 
   /* YYDEFGOTO[NTERM-NUM].  */
 static const yytype_int8 yydefgoto[] =
 {
-      -1,    20,    21,    22,    23,    24,    25,    26,    27,    31,
-      28
+      -1,    12,    13,    14,    15,    16,    17,    18,    19,    23,
+      20
 };
 
   /* YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
@@ -614,21 +591,17 @@ static const yytype_int8 yydefgoto[] =
 static const yytype_uint8 yytable[] =
 {
        1,     2,     3,     4,     5,     6,     7,     8,     9,    10,
-      11,    12,    13,    14,    15,    16,    17,    18,    42,    19,
-       1,     2,     3,     4,     5,     6,     7,     8,     9,    10,
-      11,    12,    13,    14,    15,    16,    17,    32,    33,    34,
-      35,    29,    30,    43,    36,    37,    44,    38,    39,    40,
-      41,    45,    46,    47,    48
+      29,    11,     1,     2,     3,     4,     5,     6,     7,     8,
+       9,    24,    25,    26,    27,    28,    21,    22,    30,    31,
+      32,    33,    34
 };
 
 static const yytype_uint8 yycheck[] =
 {
        6,     7,     8,     9,    10,    11,    12,    13,    14,    15,
-      16,    17,    18,    19,    20,    21,    22,    23,    26,    25,
-       6,     7,     8,     9,    10,    11,    12,    13,    14,    15,
-      16,    17,    18,    19,    20,    21,    22,     2,     3,     4,
-       5,    25,    26,    26,     9,    10,    26,    12,    13,    14,
-      15,     4,     0,    21,    25
+      18,    17,     6,     7,     8,     9,    10,    11,    12,    13,
+      14,     2,     3,     4,     5,     6,    17,    18,    18,     4,
+       0,    13,    17
 };
 
   /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
@@ -636,28 +609,25 @@ static const yytype_uint8 yycheck[] =
 static const yytype_uint8 yystos[] =
 {
        0,     6,     7,     8,     9,    10,    11,    12,    13,    14,
-      15,    16,    17,    18,    19,    20,    21,    22,    23,    25,
-      29,    30,    31,    32,    33,    34,    35,    36,    38,    25,
-      26,    37,    37,    37,    37,    37,    37,    37,    37,    37,
-      37,    37,    26,    26,    26,     4,     0,    31,    35
+      15,    17,    21,    22,    23,    24,    25,    26,    27,    28,
+      30,    17,    18,    29,    29,    29,    29,    29,    29,    18,
+      18,     4,     0,    23,    27
 };
 
   /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
 static const yytype_uint8 yyr1[] =
 {
-       0,    28,    29,    30,    30,    31,    31,    31,    32,    33,
-      34,    35,    35,    36,    36,    36,    36,    36,    36,    36,
-      36,    36,    36,    36,    36,    36,    36,    36,    37,    37,
-      38,    38
+       0,    20,    21,    22,    22,    23,    23,    23,    24,    25,
+      26,    27,    27,    28,    28,    28,    28,    28,    28,    28,
+      28,    29,    29,    30
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
 static const yytype_uint8 yyr2[] =
 {
        0,     2,     1,     1,     2,     1,     1,     1,     2,     2,
-       2,     1,     1,     2,     2,     2,     2,     2,     1,     1,
-       1,     2,     2,     1,     2,     2,     2,     2,     1,     1,
-       2,     2
+       2,     1,     1,     2,     2,     2,     2,     2,     2,     1,
+       1,     1,     1,     2
 };
 
 
@@ -1334,293 +1304,207 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 84 "maspar.y" /* yacc.c:1646  */
+#line 76 "maspar.y" /* yacc.c:1646  */
     {tfs << endl << "#001 program -> statement_list";
    MemoryPrint(tfs);
    LT.Print(tfs);
   }
-#line 1342 "y.tab.c" /* yacc.c:1646  */
+#line 1313 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 3:
-#line 90 "maspar.y" /* yacc.c:1646  */
+#line 82 "maspar.y" /* yacc.c:1646  */
     {tfs << endl << "#002 statement_list -> statement"; 
   }
-#line 1349 "y.tab.c" /* yacc.c:1646  */
+#line 1320 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 4:
-#line 94 "maspar.y" /* yacc.c:1646  */
+#line 86 "maspar.y" /* yacc.c:1646  */
     {tfs << endl << "#003 statement_list -> statement_list statement"; 
   }
-#line 1356 "y.tab.c" /* yacc.c:1646  */
+#line 1327 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 5:
-#line 98 "maspar.y" /* yacc.c:1646  */
+#line 90 "maspar.y" /* yacc.c:1646  */
     {tfs << endl << "#004 statement -> directive"; 
   }
-#line 1363 "y.tab.c" /* yacc.c:1646  */
+#line 1334 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
-#line 102 "maspar.y" /* yacc.c:1646  */
+#line 94 "maspar.y" /* yacc.c:1646  */
     {tfs << endl << "#005 statement -> labeled_item"; 
   }
-#line 1370 "y.tab.c" /* yacc.c:1646  */
+#line 1341 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
-#line 106 "maspar.y" /* yacc.c:1646  */
+#line 98 "maspar.y" /* yacc.c:1646  */
     {tfs << endl << "#006 statement -> item"; 
   }
-#line 1377 "y.tab.c" /* yacc.c:1646  */
+#line 1348 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
-#line 110 "maspar.y" /* yacc.c:1646  */
+#line 102 "maspar.y" /* yacc.c:1646  */
     {tfs << endl << "#007 directive -> ORG HEXLIT(" << (*(yyvsp[0].token)) << ")"; 
    tfs << endl << (*(yyvsp[0].token)) << "=" << hextoint(*(yyvsp[0].token)) << " decimal";
    initialaddress=hextoint(*(yyvsp[0].token));
    address=initialaddress;
    tfs << endl << "initialaddress=" << initialaddress;
   }
-#line 1388 "y.tab.c" /* yacc.c:1646  */
+#line 1359 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
-#line 118 "maspar.y" /* yacc.c:1646  */
+#line 110 "maspar.y" /* yacc.c:1646  */
     {tfs << endl << "#008 labeled_item -> label item"; 
   }
-#line 1395 "y.tab.c" /* yacc.c:1646  */
+#line 1366 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
-#line 122 "maspar.y" /* yacc.c:1646  */
+#line 114 "maspar.y" /* yacc.c:1646  */
     {tfs << endl << "#009 label -> identifier(" << (*(yyvsp[-1].token)) << ")" << "  ,"; 
    LT.Define(*(yyvsp[-1].token),address,Memory);
   }
-#line 1403 "y.tab.c" /* yacc.c:1646  */
+#line 1374 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
-#line 127 "maspar.y" /* yacc.c:1646  */
+#line 119 "maspar.y" /* yacc.c:1646  */
     {tfs << endl << "#010 item -> instruction "; 
    tfs << endl << "address=" << address;
    address++;
   }
-#line 1412 "y.tab.c" /* yacc.c:1646  */
+#line 1383 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 12:
-#line 133 "maspar.y" /* yacc.c:1646  */
+#line 125 "maspar.y" /* yacc.c:1646  */
     {tfs << endl << "#011 item -> data_definition"; 
    address++;
   }
-#line 1420 "y.tab.c" /* yacc.c:1646  */
+#line 1391 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 13:
-#line 138 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#012 instruction -> JNS operand"; 
-   unsigned short operation=op_jns|((yyvsp[0].integer));
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   tfs << dec;
-   Memory[address]=operation;
-  }
-#line 1431 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 14:
-#line 146 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#013 instruction -> LOAD operand"; 
+#line 130 "maspar.y" /* yacc.c:1646  */
+    {tfs << endl << "#012 instruction -> LOAD operand"; 
    unsigned short operation=op_load|((yyvsp[0].integer));
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    tfs << dec;
    Memory[address]=operation;
   }
-#line 1442 "y.tab.c" /* yacc.c:1646  */
+#line 1402 "y.tab.c" /* yacc.c:1646  */
     break;
 
-  case 15:
-#line 154 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#014 instruction -> STORE operand"; 
+  case 14:
+#line 138 "maspar.y" /* yacc.c:1646  */
+    {tfs << endl << "#013 instruction -> STORE operand"; 
    unsigned short operation=op_store|((yyvsp[0].integer));
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    tfs << dec;
    Memory[address]=operation;
   }
-#line 1453 "y.tab.c" /* yacc.c:1646  */
+#line 1413 "y.tab.c" /* yacc.c:1646  */
     break;
 
-  case 16:
-#line 162 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#015 instruction -> ADD operand"; 
-   unsigned short operation=op_add|((yyvsp[0].integer));
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   tfs << dec;
-   Memory[address]=operation;
-  }
-#line 1464 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 17:
-#line 170 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#016 instruction -> SUBT operand"; 
-   unsigned short operation=op_subt|((yyvsp[0].integer));
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   tfs << dec;
-   Memory[address]=operation;
-  }
-#line 1475 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 18:
-#line 178 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#017 instruction -> INPUT"; 
-   unsigned short operation=op_input;
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   Memory[address]=operation;
-   tfs << dec;
-  }
-#line 1486 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 19:
-#line 186 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#018 instruction -> OUTPUT"; 
-   unsigned short operation=op_output;
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   tfs << dec;
-   Memory[address]=operation;
-  }
-#line 1497 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 20:
-#line 194 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#019 instruction -> HALT"; 
-   unsigned short operation=op_halt;
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   tfs << dec;
-   Memory[address]=operation;
-  }
-#line 1508 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 21:
-#line 202 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#020 instruction -> SKIPCOND operand"; 
-   unsigned short operation=op_skipcond|((yyvsp[0].integer));
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   tfs << dec;
-   Memory[address]=operation;
-  }
-#line 1519 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 22:
-#line 210 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#021 instruction -> JUMP operand"; 
+  case 15:
+#line 146 "maspar.y" /* yacc.c:1646  */
+    {tfs << endl << "#014 instruction -> JUMP operand"; 
    unsigned short operation=op_jump|((yyvsp[0].integer));
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    tfs << dec;
    Memory[address]=operation;
   }
-#line 1530 "y.tab.c" /* yacc.c:1646  */
+#line 1424 "y.tab.c" /* yacc.c:1646  */
     break;
 
-  case 23:
-#line 218 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#022 instruction -> CLEAR"; 
+  case 16:
+#line 154 "maspar.y" /* yacc.c:1646  */
+    {tfs << endl << "#015 instruction -> SKIP operand"; 
+   unsigned short operation=op_skip|((yyvsp[0].integer));
+   tfs << endl << "instruction=" << setw(4) << hex << operation;
+   tfs << dec;
+   Memory[address]=operation;
+  }
+#line 1435 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 17:
+#line 162 "maspar.y" /* yacc.c:1646  */
+    {tfs << endl << "#016 instruction -> ADD operand"; 
+   unsigned short operation=op_add|((yyvsp[0].integer));
+   tfs << endl << "instruction=" << setw(4) << hex << operation;
+   tfs << dec;
+   Memory[address]=operation;
+  }
+#line 1446 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 18:
+#line 170 "maspar.y" /* yacc.c:1646  */
+    {tfs << endl << "#017 instruction -> SUBT operand"; 
+   unsigned short operation=op_subt|((yyvsp[0].integer));
+   tfs << endl << "instruction=" << setw(4) << hex << operation;
+   tfs << dec;
+   Memory[address]=operation;
+  }
+#line 1457 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 19:
+#line 178 "maspar.y" /* yacc.c:1646  */
+    {tfs << endl << "#018 instruction -> PUT"; 
+   unsigned short operation=op_put;
+   tfs << endl << "instruction=" << setw(4) << hex << operation;
+   Memory[address]=operation;
+   tfs << dec;
+  }
+#line 1468 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 20:
+#line 186 "maspar.y" /* yacc.c:1646  */
+    {tfs << endl << "#019 instruction -> CLEAR"; 
    unsigned short operation=op_clear;
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    tfs << dec;
    Memory[address]=operation;
   }
-#line 1541 "y.tab.c" /* yacc.c:1646  */
+#line 1479 "y.tab.c" /* yacc.c:1646  */
     break;
 
-  case 24:
-#line 226 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#023 instruction -> ADDI operand"; 
-   unsigned short operation=op_addi|((yyvsp[0].integer));
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   tfs << dec;
-   Memory[address]=operation;
-  }
-#line 1552 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 25:
-#line 234 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#024 instruction -> JUMPI operand"; 
-   unsigned short operation=op_jumpi|((yyvsp[0].integer));
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   tfs << dec;
-   Memory[address]=operation;
-  }
-#line 1563 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 26:
-#line 242 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#025 instruction -> LOADI operand"; 
-   unsigned short operation=op_loadi|((yyvsp[0].integer));
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   tfs << dec;
-   Memory[address]=operation;
-  }
-#line 1574 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 27:
-#line 250 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#026 instruction -> STOREI operand"; 
-   unsigned short operation=op_storei|((yyvsp[0].integer));
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   tfs << dec;
-   Memory[address]=operation;
-  }
-#line 1585 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 28:
-#line 258 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#027 operand -> HEXLIT(" << (*(yyvsp[0].token)) << ")"; 
+  case 21:
+#line 194 "maspar.y" /* yacc.c:1646  */
+    {tfs << endl << "#020 operand -> HEXLIT(" << (*(yyvsp[0].token)) << ")"; 
    (yyval.integer)=hextoint(*(yyvsp[0].token));
   }
-#line 1593 "y.tab.c" /* yacc.c:1646  */
+#line 1487 "y.tab.c" /* yacc.c:1646  */
     break;
 
-  case 29:
-#line 263 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#028 operand -> IDENTIFIER"; 
+  case 22:
+#line 199 "maspar.y" /* yacc.c:1646  */
+    {tfs << endl << "#021 operand -> IDENTIFIER"; 
    (yyval.integer)=LT.Reference(*(yyvsp[0].token),address);
   }
-#line 1601 "y.tab.c" /* yacc.c:1646  */
+#line 1495 "y.tab.c" /* yacc.c:1646  */
     break;
 
-  case 30:
-#line 268 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#029 data_definition -> HEX HEXLIT(" << (*(yyvsp[0].token)) << ")"; 
+  case 23:
+#line 204 "maspar.y" /* yacc.c:1646  */
+    {tfs << endl << "#022 data_definition -> HEX HEXLIT(" << (*(yyvsp[0].token)) << ")"; 
    tfs << endl << (*(yyvsp[0].token)) << "=" << hextoint(*(yyvsp[0].token)) << " decimal";
    Memory[address]=hextoint(*(yyvsp[0].token));
   }
-#line 1610 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 31:
-#line 274 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#030 data_definition -> DEC HEXLIT(" << (*(yyvsp[0].token)) << ")"; 
-   tfs << endl << (*(yyvsp[0].token)) << "=" << dectoint(*(yyvsp[0].token)) << " decimal";
-   Memory[address]=dectoint(*(yyvsp[0].token));
-  }
-#line 1619 "y.tab.c" /* yacc.c:1646  */
+#line 1504 "y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1623 "y.tab.c" /* yacc.c:1646  */
+#line 1508 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1848,7 +1732,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 278 "maspar.y" /* yacc.c:1906  */
+#line 208 "maspar.y" /* yacc.c:1906  */
 
 //-----------------------------------------------------------------------
 //User function section

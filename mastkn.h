@@ -48,56 +48,40 @@ extern int yydebug;
     TOKEN_BEGIN = 258,
     COMMA = 259,
     RESERVE_WORDS = 260,
-    JNS = 261,
-    LOAD = 262,
-    STORE = 263,
-    ADD = 264,
-    SUBT = 265,
-    INPUT = 266,
-    OUTPUT = 267,
-    HALT = 268,
-    SKIPCOND = 269,
-    JUMP = 270,
-    CLEAR = 271,
-    ADDI = 272,
-    JUMPI = 273,
-    LOADI = 274,
-    STOREI = 275,
-    DEC = 276,
-    HEX = 277,
-    ORG = 278,
-    REGULAR_EXPRESSIONS = 279,
-    IDENTIFIER = 280,
-    HEXLIT = 281,
-    TOKEN_END = 282
+    LOAD = 261,
+    STORE = 262,
+    JUMP = 263,
+    SKIP = 264,
+    ADD = 265,
+    SUBT = 266,
+    PUT = 267,
+    CLEAR = 268,
+    HEX = 269,
+    ORG = 270,
+    REGULAR_EXPRESSIONS = 271,
+    IDENTIFIER = 272,
+    HEXLIT = 273,
+    TOKEN_END = 274
   };
 #endif
 /* Tokens.  */
 #define TOKEN_BEGIN 258
 #define COMMA 259
 #define RESERVE_WORDS 260
-#define JNS 261
-#define LOAD 262
-#define STORE 263
-#define ADD 264
-#define SUBT 265
-#define INPUT 266
-#define OUTPUT 267
-#define HALT 268
-#define SKIPCOND 269
-#define JUMP 270
-#define CLEAR 271
-#define ADDI 272
-#define JUMPI 273
-#define LOADI 274
-#define STOREI 275
-#define DEC 276
-#define HEX 277
-#define ORG 278
-#define REGULAR_EXPRESSIONS 279
-#define IDENTIFIER 280
-#define HEXLIT 281
-#define TOKEN_END 282
+#define LOAD 261
+#define STORE 262
+#define JUMP 263
+#define SKIP 264
+#define ADD 265
+#define SUBT 266
+#define PUT 267
+#define CLEAR 268
+#define HEX 269
+#define ORG 270
+#define REGULAR_EXPRESSIONS 271
+#define IDENTIFIER 272
+#define HEXLIT 273
+#define TOKEN_END 274
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -109,7 +93,7 @@ union YYSTYPE
   string* token;
   unsigned short integer;
 
-#line 113 "y.tab.h" /* yacc.c:1909  */
+#line 97 "y.tab.h" /* yacc.c:1909  */
 };
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
