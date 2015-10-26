@@ -1,8 +1,8 @@
     LOAD    num1
     ADD     num2
     STORE   result
-    OUTPUT
-    HALT
-num1, DEC   3
-num2, DEC   5
-result, DEC 0
+    PUT 
+    CLEAR A             <--Alt Bit Flipped
+num1, HEX   3
+num2, HEX   5
+result, HEX 0
