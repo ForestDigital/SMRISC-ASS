@@ -134,16 +134,8 @@ item:
    address++;
   } 
 instruction:
-  JNS operand
-  {tfs << endl << "#012 instruction -> JNS operand"; 
-   unsigned short operation=op_jns|($2);
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   tfs << dec;
-   Memory[address]=operation;
-  } 
-instruction:
   LOAD operand
-  {tfs << endl << "#013 instruction -> LOAD operand"; 
+  {tfs << endl << "#012 instruction -> LOAD operand"; 
    unsigned short operation=op_load|($2);
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    tfs << dec;
@@ -151,15 +143,31 @@ instruction:
   } 
 instruction:
   STORE operand
-  {tfs << endl << "#014 instruction -> STORE operand"; 
+  {tfs << endl << "#013 instruction -> STORE operand"; 
    unsigned short operation=op_store|($2);
+   tfs << endl << "instruction=" << setw(4) << hex << operation;
+   tfs << dec;
+   Memory[address]=operation;
+  }
+instruction:
+  JUMP operand 
+  {tfs << endl << "#014 instruction -> JUMP operand"; 
+   unsigned short operation=op_jump|($2);
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    tfs << dec;
    Memory[address]=operation;
   } 
 instruction:
+  SKIP operand 
+  {tfs << endl << "#015 instruction -> SKIP operand"; 
+   unsigned short operation=op_skip|($2);
+   tfs << endl << "instruction=" << setw(4) << hex << operation;
+   tfs << dec;
+   Memory[address]=operation;
+  }   
+instruction:
   ADD operand
-  {tfs << endl << "#015 instruction -> ADD operand"; 
+  {tfs << endl << "#016 instruction -> ADD operand"; 
    unsigned short operation=op_add|($2);
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    tfs << dec;
@@ -167,28 +175,20 @@ instruction:
   } 
 instruction:
   SUBT operand
-  {tfs << endl << "#016 instruction -> SUBT operand"; 
+  {tfs << endl << "#017 instruction -> SUBT operand"; 
    unsigned short operation=op_subt|($2);
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    tfs << dec;
    Memory[address]=operation;
   } 
 instruction:
-  INPUT
-  {tfs << endl << "#017 instruction -> INPUT"; 
+  PUT
+  {tfs << endl << "#018 instruction -> PUT"; 
    unsigned short operation=op_input;
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    Memory[address]=operation;
    tfs << dec;
-  } 
-instruction:
-  OUTPUT
-  {tfs << endl << "#018 instruction -> OUTPUT"; 
-   unsigned short operation=op_output;
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   tfs << dec;
-   Memory[address]=operation;
-  } 
+  }
 instruction:
   HALT 
   {tfs << endl << "#019 instruction -> HALT"; 
@@ -196,23 +196,7 @@ instruction:
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    tfs << dec;
    Memory[address]=operation;
-  } 
-instruction:
-  SKIPCOND operand 
-  {tfs << endl << "#020 instruction -> SKIPCOND operand"; 
-   unsigned short operation=op_skipcond|($2);
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   tfs << dec;
-   Memory[address]=operation;
-  } 
-instruction:
-  JUMP operand 
-  {tfs << endl << "#021 instruction -> JUMP operand"; 
-   unsigned short operation=op_jump|($2);
-   tfs << endl << "instruction=" << setw(4) << hex << operation;
-   tfs << dec;
-   Memory[address]=operation;
-  } 
+  }
 instruction:
   CLEAR 
   {tfs << endl << "#022 instruction -> CLEAR"; 
