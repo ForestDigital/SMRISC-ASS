@@ -1,0 +1,68 @@
+#----------------------------------------------------------------------
+# File makemasm creates a MARIE Assembler
+#----------------------------------------------------------------------
+# Author: Thomas R. Turner
+# E-Mail: trturner@uco.edu
+# Date:   October, 2015
+#----------------------------------------------------------------------
+# Copyright October, 2015 by Thomas R. Turner.
+# Do not reproduce without permission from Thomas R. Turner.
+#----------------------------------------------------------------------
+# Object files
+#----------------------------------------------------------------------
+obj	=	maslabel.o \
+		maslist.o \
+		masutilities.o \
+		maspar.o \
+		maslex.o \
+		mas.o		
+#----------------------------------------------------------------------
+# Bind the subset Pascal Scanneer 
+#----------------------------------------------------------------------
+mas:		${obj}
+		g++ -o mas ${obj} -lm -ll
+#----------------------------------------------------------------------
+# File mas.cpp processes command line arguments
+#----------------------------------------------------------------------
+mas.o:		mas.cpp maslex.h
+		g++ -c -g mas.cpp
+#----------------------------------------------------------------------
+# File maslex.cpp is the lex-generated scanner
+#----------------------------------------------------------------------
+maslex.cpp:	maslex.l maslex.h
+		lex maslex.l
+		mv lex.yy.c maslex.cpp
+#---------------------------------------------------------------------
+#----------------------------------------------------------------------
+maslex.o:	maslex.cpp maslex.h
+		g++ -c -g maslex.cpp
+#----------------------------------------------------------------
+# Create files maspar.cpp and mastkn.h from file maspar.y
+#----------------------------------------------------------------
+mastkn.h	\
+maspar.cpp:	maspar.y
+		yacc -d -v maspar.y
+		mv y.tab.c maspar.cpp 
+		mv y.tab.h mastkn.h
+#----------------------------------------------------------------
+# Compile the parser maspar.y
+#----------------------------------------------------------------
+maspar.o:	maspar.cpp maspar.h masopcodes.h
+		g++ -c -g maspar.cpp
+#----------------------------------------------------------------
+# Compile the utilities
+#----------------------------------------------------------------
+masutilities:	masutilities.cpp masutilities.h
+		g++ -c -g masutilities.cpp
+#----------------------------------------------------------------
+# Compile class List (used in class Label
+#----------------------------------------------------------------
+maslist.o:	maslist.cpp maslist.h
+		g++ -c -g maslist.cpp
+#----------------------------------------------------------------
+# Compile class label
+#----------------------------------------------------------------
+maslabel.o:	maslabel.cpp maslabel.h maslist.h
+		g++ -c -g maslabel.cpp
+#----------------------------------------------------------------
+#----------------------------------------------------------------

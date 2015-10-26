@@ -1,0 +1,5 @@
+rm maslex.cpp
+rm maspar.cpp
+rm *.o
+rm mas
+make -f makemasm

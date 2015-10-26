@@ -1,0 +1,882 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"save",
+				"saveData"
+			],
+			[
+				"virus",
+				"virusData"
+			],
+			[
+				"shee",
+				"sheet_fire"
+			],
+			[
+				"loca",
+				"localToContent"
+			],
+			[
+				"spri",
+				"spriteListener"
+			],
+			[
+				"x",
+				"xplode"
+			],
+			[
+				"seque",
+				"sequence_explode"
+			],
+			[
+				"new",
+				"newSprite"
+			],
+			[
+				"remove",
+				"removeSelf"
+			],
+			[
+				"seq",
+				"sequence_explode"
+			],
+			[
+				"sequ",
+				"sequence_fire"
+			],
+			[
+				"sheet",
+				"sheet_explode"
+			],
+			[
+				"gra",
+				"graphics"
+			],
+			[
+				"bull",
+				"bullet"
+			],
+			[
+				"add",
+				"addEventListener"
+			],
+			[
+				"bullet",
+				"bulletHit"
+			],
+			[
+				"sec",
+				"sceneGroup"
+			],
+			[
+				"bu",
+				"bullet"
+			],
+			[
+				"bt",
+				"btTouch"
+			],
+			[
+				"ph",
+				"physics"
+			],
+			[
+				"scre",
+				"screenH"
+			],
+			[
+				"building",
+				"buildings"
+			],
+			[
+				"sc",
+				"screenW"
+			],
+			[
+				"ha",
+				"halfH"
+			],
+			[
+				"scree",
+				"screenH"
+			],
+			[
+				"Scre",
+				"screenW"
+			],
+			[
+				"sequen",
+				"setSequence"
+			],
+			[
+				"sou",
+				"south"
+			],
+			[
+				"set",
+				"setSequence"
+			],
+			[
+				"she",
+				"sheet_tank"
+			],
+			[
+				"newT",
+				"newImageSheet"
+			],
+			[
+				"sre",
+				"screenW"
+			],
+			[
+				"g",
+				"ground"
+			],
+			[
+				"re",
+				"require"
+			],
+			[
+				"ti",
+				"tileSize"
+			],
+			[
+				"screen",
+				"screenW"
+			],
+			[
+				"conte",
+				"contentHeight"
+			],
+			[
+				"cont",
+				"contentCenterWidth"
+			],
+			[
+				"viru",
+				"virusDrive"
+			],
+			[
+				"vi",
+				"virusCase"
+			],
+			[
+				"vir",
+				"virusCube"
+			],
+			[
+				"spi",
+				"spin_sequence"
+			],
+			[
+				"vire",
+				"virusSheet"
+			],
+			[
+				"loa",
+				"loadData"
+			],
+			[
+				"Vi",
+				"virusAttack"
+			],
+			[
+				"player",
+				"playerData"
+			],
+			[
+				"lo",
+				"loginButton"
+			],
+			[
+				"cn",
+				"contentHeight"
+			],
+			[
+				"L",
+				"LIGHT_BLUE"
+			],
+			[
+				"ch",
+				"checkerboard"
+			],
+			[
+				"hal",
+				"halfH"
+			],
+			[
+				"scr",
+				"screenH"
+			],
+			[
+				"inf",
+				"infect"
+			],
+			[
+				"tap",
+				"tapListener"
+			],
+			[
+				"ta",
+				"tapListener"
+			],
+			[
+				"l",
+				"layers"
+			],
+			[
+				"al",
+				"alpha"
+			],
+			[
+				"di",
+				"dispGroup"
+			],
+			[
+				"ac",
+				"actuX"
+			],
+			[
+				"actu",
+				"actuY"
+			],
+			[
+				"dir",
+				"dirGroup"
+			],
+			[
+				"num",
+				"numberOfDirectories"
+			],
+			[
+				"infe",
+				"infected"
+			],
+			[
+				"in",
+				"infectable"
+			],
+			[
+				"number",
+				"numberOfChildren"
+			],
+			[
+				"numb",
+				"numberOfDirectories"
+			],
+			[
+				"i",
+				"infect"
+			],
+			[
+				"infec",
+				"infectable"
+			],
+			[
+				"line",
+				"line2"
+			],
+			[
+				"lin",
+				"lineY2"
+			],
+			[
+				"crea",
+				"createDirs"
+			],
+			[
+				"cre",
+				"createDirs"
+			],
+			[
+				"n",
+				"numberOfDirectories"
+			],
+			[
+				"con",
+				"contentCenterY"
+			],
+			[
+				"tank",
+				"tankCannon"
+			],
+			[
+				"fire",
+				"firetimer"
+			],
+			[
+				"f",
+				"firetimer"
+			],
+			[
+				"tan",
+				"tankBody"
+			],
+			[
+				"is",
+				"isBodyActive"
+			],
+			[
+				"t",
+				"true"
+			],
+			[
+				"se",
+				"self"
+			],
+			[
+				"ad",
+				"adjustTankBounds"
+			],
+			[
+				"content",
+				"contentCenterX"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"en",
+				"endAnimation"
+			],
+			[
+				"menu",
+				"menuCat"
+			],
+			[
+				"m",
+				"menuCat"
+			],
+			[
+				"men",
+				"menuMouse"
+			],
+			[
+				"me",
+				"menuMouse"
+			],
+			[
+				"remo",
+				"removeSelf"
+			],
+			[
+				"sta",
+				"startAnimation"
+			],
+			[
+				"cover",
+				"coverTop"
+			],
+			[
+				"h",
+				"highestLevel"
+			],
+			[
+				"pl",
+				"playerData"
+			],
+			[
+				"y",
+				"yVals"
+			],
+			[
+				"Im",
+				"Imglvl"
+			],
+			[
+				"I",
+				"Imglvl"
+			],
+			[
+				"Img",
+				"Imglvl10"
+			],
+			[
+				"scene",
+				"sceneGroup"
+			],
+			[
+				"hi",
+				"highscoresMenu"
+			],
+			[
+				"co",
+				"composer"
+			],
+			[
+				"CM",
+				"CMhighscores"
+			],
+			[
+				"sce",
+				"sceneGroup"
+			],
+			[
+				"cm",
+				"CMhighscores"
+			],
+			[
+				"fa",
+				"facedLeft"
+			],
+			[
+				"creat",
+				"createDisplay"
+			],
+			[
+				"game",
+				"gameData"
+			],
+			[
+				"upd",
+				"updMouse"
+			],
+			[
+				"cat",
+				"catAI"
+			],
+			[
+				"u",
+				"updateMap"
+			],
+			[
+				"te",
+				"testMap"
+			],
+			[
+				"tu",
+				"tunnelFinished"
+			],
+			[
+				"up",
+				"catUpdateDistance"
+			],
+			[
+				"direc",
+				"directionChoice"
+			],
+			[
+				"dire",
+				"directionChoice"
+			],
+			[
+				"on",
+				"onLocalCollision"
+			],
+			[
+				"ori",
+				"originy"
+			],
+			[
+				"orign",
+				"originX"
+			],
+			[
+				"fun",
+				"function	function"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "pa",
+		"selected_items":
+		[
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"git: ",
+				"Git: Push"
+			],
+			[
+				"git: p",
+				"Git: Push"
+			],
+			[
+				"git:",
+				"Git: Quick Commit"
+			],
+			[
+				"git: stat",
+				"Git: Status"
+			],
+			[
+				"pus",
+				"Git: Push"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"Add",
+				"Git: Quick Add"
+			],
+			[
+				"git",
+				"Git: Push"
+			],
+			[
+				"Git:Commit",
+				"Git: Quick Commit"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+			"import urllib2,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation') "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/jay-t/.wine/drive_c/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Graphics/Container/main.lua",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/Little Tank/build.settings",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/Little Tank/modifiedjoystick.lua",
+		"/home/jay-t/.wine/drive_c/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Ads/InMobi/ReadMe.txt",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/mamdflas/level1.lua",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/mamdflas/gamemenu.lua",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/mamdflas/gameconvo.txt",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/mamdflas/directory.lua",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/mamdflas/playerdata.lua",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/mamdflas/virusdata.lua",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/mamdflas/mainmenu.lua",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/mamdflas/main.lua",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/mamdflas/loadsave.lua",
+		"/home/jay-t/.wine/drive_c/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Storage/SaveTable/main.lua",
+		"/home/jay-t/.wine/drive_c/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Storage/SaveTable/str.lua",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/Last Defense/rungame.lua",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/Last Defense/gamemechanics.lua",
+		"/home/jay-t/.wine/drive_c/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/main.lua",
+		"/home/jay-t/.wine/drive_c/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Sprites/SpriteTilesComplex/main.lua",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/Last Defense/baddies.lua",
+		"/home/jay-t/Downloads/L11_Functional_Modeling_ch05lect1.ppt",
+		"/home/jay-t/.wine/drive_c/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/rungame.lua",
+		"/home/jay-t/.wine/drive_c/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/playerdata.lua",
+		"/home/jay-t/.wine/drive_c/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/postgame.lua",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/CATMOUSE/main.lua",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/Tilt-Monster-master/main.lua",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/Manifest-Crystal-master/code/main.lua",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/Tilt-Monster-master/director.lua",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/Tilt-Monster-master/newgame.caf",
+		"/home/jay-t/.wine/drive_c/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Sprites/SpriteTilesComplex/gamemenu.lua",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/Last Defense/mainmenu.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/selectlevel.lua",
+		"/home/jay-t/.wine/dosdevices/c:/users/jay-t/My Documents/Corona Projects/Last Defense/mainmenu.lua",
+		"/home/jay-t/.wine/dosdevices/c:/users/jay-t/My Documents/Corona Projects/Last Defense/build.settings",
+		"/home/jay-t/.wine/dosdevices/c:/users/jay-t/My Documents/Corona Projects/Last Defense/rungame.lua",
+		"/home/jay-t/.wine/dosdevices/c:/users/jay-t/My Documents/Corona Projects/Last Defense/gamemechanics.lua",
+		"/home/jay-t/.wine/dosdevices/c:/users/jay-t/My Documents/Corona Projects/Last Defense/playerdata.lua",
+		"/home/jay-t/.wine/dosdevices/c:/users/jay-t/My Documents/Corona Projects/Last Defense/baddies.lua",
+		"/home/jay-t/.wine/dosdevices/c:/users/jay-t/My Documents/Corona Projects/Last Defense/weapons.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/mainmenu.lua",
+		"/home/jay-t/Downloads/UnityDownloadAssistant-5.1.2f1.exe",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/levels.lua",
+		"/home/jay-t/.wine/dosdevices/c:/users/jay-t/My Documents/Corona Projects/Last Defense/gamemenu.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/playerdata.lua",
+		"/home/jay-t/.wine/drive_c/Program Files (x86)/Interplay/Fallout 2/DATA/SAVEGAME/SLOT06/SAVE.DAT",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/gamefunctions.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/config.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/rungame.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/main.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/postgame.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/README.md",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Storage/SaveTable/main.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/gamedata.lua",
+		"/home/jay-t/.wine/drive_c/users/jay-t/My Documents/Corona Projects/Last Defense/main.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Ads/InMobi/main.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Ads/inneractive/main.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Interface/Composer/scenetemplate.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Physics/ManyCrates/main.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Storage/FileDemo/main.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Storage/FileDemo/build.settings",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Graphics/Fishies/main.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Storage/SaveTable/str.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Storage/SQLite/main.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Storage/SaveTable/ReadMe.txt",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/runGame.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/mainMenu.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/highscoresMenu.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/postGame.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/gameFunctions.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Catmouse1/gameData.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Interface/Joystick/simpleJoystick.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Interface/Joystick/gameFunctions.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Interface/Composer/main.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Interface/Composer/scene1.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Interface/Composer/scene2.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Interface/Joystick/main.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Interface/Joystick/gameData.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Interface/Joystick/GamePanel.png",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Interface/Composer/config.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Interface/Joystick/config.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Interface/ButtonEvents/main.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Physics/RegionQuery/main.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Physics/RegionQuery/config.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Physics/RegionQuery/build.settings",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Physics/RegionQuery/gameUI.lua",
+		"/home/jay-t/.wine/dosdevices/c:/Program Files (x86)/Corona Labs/Corona SDK/Sample Code/Interface/Composer/build.settings",
+		"/home/jay-t/.wine/dosdevices/c:/users/jay-t/My Documents/Corona Projects/CATMOUSE/main.lua",
+		"/media/jay-t/4496-13EC/backuplaptop/CatMouse/src/controller/Main.java",
+		"/media/jay-t/4496-13EC/backuplaptop/CatMouse/src/view/MainWindow.java"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"controlmouse",
+			"gameData.player",
+			"campaignGame",
+			"y",
+			"tankBody",
+			"-",
+			"|",
+			"1",
+			"+",
+			" ",
+			"+",
+			"|",
+			"-",
+			" ",
+			"#",
+			" ",
+			"|",
+			"-",
+			"+",
+			"4",
+			"50",
+			"	\n",
+			"true",
+			"end",
+			"}\n",
+			"	\n",
+			"loadData",
+			"init",
+			"#",
+			" ",
+			"|",
+			"--",
+			"+",
+			" ",
+			"#",
+			"|",
+			"--",
+			"+",
+			" ",
+			".",
+			"..",
+			"  ",
+			"11",
+			"#",
+			"+",
+			"-",
+			"--",
+			"|",
+			"image",
+			"testMap",
+			"cheese",
+			"cat",
+			" ",
+			"gameData.playerCurrentFace",
+			"mouse",
+			"gameata",
+			"for",
+			"mover",
+			"moverDone",
+			"controlBlock",
+			"buttonHandler",
+			"mouseLeft",
+			"gameUI",
+			"model.mouseLeft",
+			"mouse"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"movePlayer",
+			"startHack",
+			"1",
+			"2",
+			"1",
+			"2",
+			"1",
+			"2",
+			"1",
+			"11",
+			"1",
+			"2",
+			"1",
+			"11",
+			"1",
+			"2",
+			".",
+			" ",
+			"1",
+			".",
+			"1",
+			"CMlogo",
+			"currentMap",
+			"gameData.cheese",
+			"gameData.cats",
+			"mouseCurrentFace",
+			"gameData.player",
+			"tunnel",
+			"tunnelFinished",
+			"controlMouse",
+			"updateMap",
+			"mouse.facedLeft",
+			"mouseLeft",
+			"model.mouse"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Java/JavaC.sublime-build",
+	"project": "makemas.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 196.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
