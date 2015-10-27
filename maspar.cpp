@@ -109,7 +109,7 @@ extern int col;
 //---------------------------------------------------------------------
 int address=0;               //Address of the next instruction
 int initialaddress=0;        //Address of the first instruction
-int Memory[4096];            //MARIE's memory
+int Memory[256];            //MARIE's memory
 Label LT;                    //Label Table for resolving the addresses of labels
 //---------------------------------------------------------------------
 
@@ -451,9 +451,9 @@ union yyalloc
 #endif /* !YYCOPY_NEEDED */
 
 /* YYFINAL -- State number of the termination state.  */
-#define YYFINAL  32
+#define YYFINAL  34
 /* YYLAST -- Last index in YYTABLE.  */
-#define YYLAST   32
+#define YYLAST   34
 
 /* YYNTOKENS -- Number of terminals.  */
 #define YYNTOKENS  20
@@ -462,7 +462,7 @@ union yyalloc
 /* YYNRULES -- Number of rules.  */
 #define YYNRULES  23
 /* YYNSTATES -- Number of states.  */
-#define YYNSTATES  35
+#define YYNSTATES  37
 
 /* YYTRANSLATE[YYX] -- Symbol number corresponding to YYX as returned
    by yylex, with out-of-bounds checking.  */
@@ -554,10 +554,10 @@ static const yytype_uint16 yytoknum[] =
      STATE-NUM.  */
 static const yytype_int8 yypact[] =
 {
-      -6,     9,     9,     9,     9,     9,     9,    -9,    -9,    -8,
-      10,    25,    30,    -6,    -9,    -9,    -9,     6,    -9,    -9,
+      -6,    11,    11,    11,    11,    11,    11,    11,    11,    -8,
+      12,    27,    32,    -6,    -9,    -9,    -9,     6,    -9,    -9,
       -9,    -9,    -9,    -9,    -9,    -9,    -9,    -9,    -9,    -9,
-      -9,    -9,    -9,    -9,    -9
+      -9,    -9,    -9,    -9,    -9,    -9,    -9
 };
 
   /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -565,16 +565,16 @@ static const yytype_int8 yypact[] =
      means the default is an error.  */
 static const yytype_uint8 yydefact[] =
 {
-       0,     0,     0,     0,     0,     0,     0,    19,    20,     0,
+       0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
        0,     0,     0,     2,     3,     5,     6,     0,     7,    11,
-      12,    22,    21,    13,    14,    15,    16,    17,    18,    23,
-       8,    10,     1,     4,     9
+      12,    22,    21,    13,    14,    15,    16,    17,    18,    19,
+      20,    23,     8,    10,     1,     4,     9
 };
 
   /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int8 yypgoto[] =
 {
-      -9,    -9,    -9,    18,    -9,    -9,    -9,    15,    -9,    19,
+      -9,    -9,    -9,    20,    -9,    -9,    -9,    17,    -9,    19,
       -9
 };
 
@@ -591,17 +591,17 @@ static const yytype_int8 yydefgoto[] =
 static const yytype_uint8 yytable[] =
 {
        1,     2,     3,     4,     5,     6,     7,     8,     9,    10,
-      29,    11,     1,     2,     3,     4,     5,     6,     7,     8,
-       9,    24,    25,    26,    27,    28,    21,    22,    30,    31,
-      32,    33,    34
+      31,    11,     1,     2,     3,     4,     5,     6,     7,     8,
+       9,    24,    25,    26,    27,    28,    29,    30,    21,    22,
+      32,    33,    34,    35,    36
 };
 
 static const yytype_uint8 yycheck[] =
 {
        6,     7,     8,     9,    10,    11,    12,    13,    14,    15,
       18,    17,     6,     7,     8,     9,    10,    11,    12,    13,
-      14,     2,     3,     4,     5,     6,    17,    18,    18,     4,
-       0,    13,    17
+      14,     2,     3,     4,     5,     6,     7,     8,    17,    18,
+      18,     4,     0,    13,    17
 };
 
   /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
@@ -610,8 +610,8 @@ static const yytype_uint8 yystos[] =
 {
        0,     6,     7,     8,     9,    10,    11,    12,    13,    14,
       15,    17,    21,    22,    23,    24,    25,    26,    27,    28,
-      30,    17,    18,    29,    29,    29,    29,    29,    29,    18,
-      18,     4,     0,    23,    27
+      30,    17,    18,    29,    29,    29,    29,    29,    29,    29,
+      29,    18,    18,     4,     0,    23,    27
 };
 
   /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
@@ -626,8 +626,8 @@ static const yytype_uint8 yyr1[] =
 static const yytype_uint8 yyr2[] =
 {
        0,     2,     1,     1,     2,     1,     1,     1,     2,     2,
-       2,     1,     1,     2,     2,     2,     2,     2,     2,     1,
-       1,     1,     1,     2
+       2,     1,     1,     2,     2,     2,     2,     2,     2,     2,
+       2,     1,     1,     2
 };
 
 
@@ -1458,19 +1458,19 @@ yyreduce:
 
   case 19:
 #line 178 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#018 instruction -> PUT"; 
-   unsigned short operation=op_put;
+    {tfs << endl << "#018 instruction -> PUT operand"; 
+   unsigned short operation=op_put|((yyvsp[0].integer));
    tfs << endl << "instruction=" << setw(4) << hex << operation;
-   Memory[address]=operation;
    tfs << dec;
+   Memory[address]=operation;
   }
 #line 1468 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 20:
 #line 186 "maspar.y" /* yacc.c:1646  */
-    {tfs << endl << "#019 instruction -> CLEAR"; 
-   unsigned short operation=op_clear;
+    {tfs << endl << "#019 instruction -> CLEAR operand"; 
+   unsigned short operation=op_clear|((yyvsp[0].integer));
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    tfs << dec;
    Memory[address]=operation;
