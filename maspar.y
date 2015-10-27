@@ -44,7 +44,7 @@ extern int col;
 //---------------------------------------------------------------------
 int address=0;               //Address of the next instruction
 int initialaddress=0;        //Address of the first instruction
-int Memory[4096];            //MARIE's memory
+int Memory[256];            //MARIE's memory
 Label LT;                    //Label Table for resolving the addresses of labels
 //---------------------------------------------------------------------
 %}
@@ -174,17 +174,17 @@ instruction:
    Memory[address]=operation;
   } 
 instruction:
-  PUT
-  {tfs << endl << "#018 instruction -> PUT"; 
-   unsigned short operation=op_put;
+  PUT operand
+  {tfs << endl << "#018 instruction -> PUT operand"; 
+   unsigned short operation=op_put|($2);
    tfs << endl << "instruction=" << setw(4) << hex << operation;
-   Memory[address]=operation;
    tfs << dec;
+   Memory[address]=operation;
   }
 instruction:
-  CLEAR 
-  {tfs << endl << "#019 instruction -> CLEAR"; 
-   unsigned short operation=op_clear;
+  CLEAR operand
+  {tfs << endl << "#019 instruction -> CLEAR operand"; 
+   unsigned short operation=op_clear|($2);
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    tfs << dec;
    Memory[address]=operation;
