@@ -1,7 +1,7 @@
 
-Token:Code=261 Name=      LOAD line=  1 col=  5 Spelling="load"
-Token:Code=272 Name=IDENTIFIER line=  1 col= 13 Spelling="num1"
-#021 operand -> IDENTIFIER
+Token:Code=261 Name=      LOAD line=  1 col=  9 Spelling="load"
+Token:Code=273 Name=IDENTIFIER line=  1 col= 17 Spelling="num1"
+#024 operand -> IDENTIFIER
 #012 instruction -> LOAD operand
 instruction=   0
 #010 item -> instruction 
@@ -9,17 +9,17 @@ address=0
 #006 statement -> item
 #002 statement_list -> statement
 Token:Code=265 Name=       ADD line=  2 col=  5 Spelling="add"
-Token:Code=272 Name=IDENTIFIER line=  2 col= 13 Spelling="num2"
-#021 operand -> IDENTIFIER
-#016 instruction -> ADD operand
+Token:Code=273 Name=IDENTIFIER line=  2 col= 13 Spelling="num2"
+#024 operand -> IDENTIFIER
+#017 instruction -> ADD operand
 instruction=4000
 #010 item -> instruction 
 address=1
 #006 statement -> item
 #003 statement_list -> statement_list statement
 Token:Code=262 Name=     STORE line=  3 col=  5 Spelling="store"
-Token:Code=272 Name=IDENTIFIER line=  3 col= 13 Spelling="result"
-#021 operand -> IDENTIFIER
+Token:Code=273 Name=IDENTIFIER line=  3 col= 13 Spelling="result"
+#024 operand -> IDENTIFIER
 #013 instruction -> STORE operand
 instruction=1000
 #010 item -> instruction 
@@ -27,51 +27,48 @@ address=2
 #006 statement -> item
 #003 statement_list -> statement_list statement
 Token:Code=267 Name=       PUT line=  4 col=  5 Spelling="put"
-Token:Code=273 Name=    HEXLIT line=  4 col= 13 Spelling="30"
-#020 operand -> HEXLIT(30)
-#018 instruction -> PUT operand
-instruction=6030
+Token:Code=268 Name=     CLEAR line=  5 col=  5 Spelling="clear"
+#020 instruction -> PUT
+instruction=6000
 #010 item -> instruction 
 address=3
 #006 statement -> item
 #003 statement_list -> statement_list statement
-Token:Code=268 Name=     CLEAR line=  5 col=  5 Spelling="clear"
-Token:Code=273 Name=    HEXLIT line=  5 col= 13 Spelling="10"
-#020 operand -> HEXLIT(10)
-#019 instruction -> CLEAR operand
-instruction=7010
+Token:Code=269 Name=      AltC line=  5 col= 13 Spelling="altc"
+#021 instruction -> CLEAR AltC
+instruction=7000
 #010 item -> instruction 
 address=4
 #006 statement -> item
 #003 statement_list -> statement_list statement
-Token:Code=272 Name=IDENTIFIER line=  6 col=  1 Spelling="num1"
+Token:Code=273 Name=IDENTIFIER line=  6 col=  1 Spelling="num1"
 Token:Code=259 Name=     COMMA line=  6 col=  5 Spelling=","
 #009 label -> identifier(num1)  ,
-Token:Code=269 Name=       HEX line=  6 col=  7 Spelling="hex"
-Token:Code=273 Name=    HEXLIT line=  6 col= 13 Spelling="3"
-#022 data_definition -> HEX HEXLIT(3)
+Token:Code=270 Name=       HEX line=  6 col=  7 Spelling="hex"
+Token:Code=274 Name=    HEXLIT line=  6 col= 13 Spelling="3"
+#025 data_definition -> HEX HEXLIT(3)
 3=3 decimal
 #011 item -> data_definition
 #008 labeled_item -> label item
 #005 statement -> labeled_item
 #003 statement_list -> statement_list statement
-Token:Code=272 Name=IDENTIFIER line=  7 col=  1 Spelling="num2"
+Token:Code=273 Name=IDENTIFIER line=  7 col=  1 Spelling="num2"
 Token:Code=259 Name=     COMMA line=  7 col=  5 Spelling=","
 #009 label -> identifier(num2)  ,
-Token:Code=269 Name=       HEX line=  7 col=  7 Spelling="hex"
-Token:Code=273 Name=    HEXLIT line=  7 col= 13 Spelling="5"
-#022 data_definition -> HEX HEXLIT(5)
+Token:Code=270 Name=       HEX line=  7 col=  7 Spelling="hex"
+Token:Code=274 Name=    HEXLIT line=  7 col= 13 Spelling="5"
+#025 data_definition -> HEX HEXLIT(5)
 5=5 decimal
 #011 item -> data_definition
 #008 labeled_item -> label item
 #005 statement -> labeled_item
 #003 statement_list -> statement_list statement
-Token:Code=272 Name=IDENTIFIER line=  8 col=  1 Spelling="result"
+Token:Code=273 Name=IDENTIFIER line=  8 col=  1 Spelling="result"
 Token:Code=259 Name=     COMMA line=  8 col=  7 Spelling=","
 #009 label -> identifier(result)  ,
-Token:Code=269 Name=       HEX line=  8 col=  9 Spelling="hex"
-Token:Code=273 Name=    HEXLIT line=  8 col= 13 Spelling="0"
-#022 data_definition -> HEX HEXLIT(0)
+Token:Code=270 Name=       HEX line=  8 col=  9 Spelling="hex"
+Token:Code=274 Name=    HEXLIT line=  8 col= 13 Spelling="0"
+#025 data_definition -> HEX HEXLIT(0)
 0=0 decimal
 #011 item -> data_definition
 #008 labeled_item -> label item
@@ -79,7 +76,7 @@ Token:Code=273 Name=    HEXLIT line=  8 col= 13 Spelling="0"
 #003 statement_list -> statement_list statement
 #001 program -> statement_list
 adr ad00 ad01 ad02 ad03 ad04 ad05 ad06 ad07 ad08 ad09 ad0a ad0b ad0c ad0d ad0e ad0f
-000 0000 4006 1007 6030 7010 0003 0005 0000
+000 0000 4006 1007 6000 7000 0003 0005 0000
 
           Label Defined Address References
            num1   false    0000

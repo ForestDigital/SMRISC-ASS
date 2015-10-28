@@ -44,7 +44,7 @@ extern int col;
 //---------------------------------------------------------------------
 int address=0;               //Address of the next instruction
 int initialaddress=0;        //Address of the first instruction
-int Memory[256];            //MARIE's memory
+int Memory[256];            //SMRISC's memory
 Label LT;                    //Label Table for resolving the addresses of labels
 //---------------------------------------------------------------------
 %}
@@ -64,6 +64,7 @@ Label LT;                    //Label Table for resolving the addresses of labels
 %token <token>   SUBT
 %token <token>   PUT
 %token <token>   CLEAR
+%token <token>   AltC
 %token <token>   HEX
 %token <token>   ORG
 %token <token>   REGULAR_EXPRESSIONS
@@ -150,16 +151,24 @@ instruction:
    Memory[address]=operation;
   } 
 instruction:
-  SKIP operand 
-  {tfs << endl << "#015 instruction -> SKIP operand"; 
-   unsigned short operation=op_skip|($2);
+  SKIP AltC 
+  {tfs << endl << "#015 instruction -> SKIP AltC"; 
+   unsigned short operation=op_skipa;
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    tfs << dec;
    Memory[address]=operation;
-  }   
+  }
+instruction:
+  SKIP  
+  {tfs << endl << "#016 instruction -> SKIP"; 
+   unsigned short operation=op_skip;
+   tfs << endl << "instruction=" << setw(4) << hex << operation;
+   tfs << dec;
+   Memory[address]=operation;
+  }    
 instruction:
   ADD operand
-  {tfs << endl << "#016 instruction -> ADD operand"; 
+  {tfs << endl << "#017 instruction -> ADD operand"; 
    unsigned short operation=op_add|($2);
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    tfs << dec;
@@ -167,41 +176,57 @@ instruction:
   } 
 instruction:
   SUBT operand
-  {tfs << endl << "#017 instruction -> SUBT operand"; 
+  {tfs << endl << "#018 instruction -> SUBT operand"; 
    unsigned short operation=op_subt|($2);
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    tfs << dec;
    Memory[address]=operation;
   } 
 instruction:
-  PUT operand
-  {tfs << endl << "#018 instruction -> PUT operand"; 
-   unsigned short operation=op_put|($2);
+  PUT AltC
+  {tfs << endl << "#019 instruction -> PUT AltC"; 
+   unsigned short operation=op_puta;
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    tfs << dec;
    Memory[address]=operation;
   }
 instruction:
-  CLEAR operand
-  {tfs << endl << "#019 instruction -> CLEAR operand"; 
-   unsigned short operation=op_clear|($2);
+  PUT
+  {tfs << endl << "#020 instruction -> PUT"; 
+   unsigned short operation=op_put;
+   tfs << endl << "instruction=" << setw(4) << hex << operation;
+   tfs << dec;
+   Memory[address]=operation;
+  }
+instruction:
+  CLEAR AltC
+  {tfs << endl << "#021 instruction -> CLEAR AltC"; 
+   unsigned short operation=op_cleara;
+   tfs << endl << "instruction=" << setw(4) << hex << operation;
+   tfs << dec;
+   Memory[address]=operation;
+  }
+instruction:
+  CLEAR 
+  {tfs << endl << "#022 instruction -> CLEAR"; 
+   unsigned short operation=op_clear;
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    tfs << dec;
    Memory[address]=operation;
   }
 operand:
   HEXLIT
-  {tfs << endl << "#020 operand -> HEXLIT(" << (*$1) << ")"; 
+  {tfs << endl << "#023 operand -> HEXLIT(" << (*$1) << ")"; 
    $$=hextoint(*$1);
   } 
 operand:
   IDENTIFIER
-  {tfs << endl << "#021 operand -> IDENTIFIER"; 
+  {tfs << endl << "#024 operand -> IDENTIFIER"; 
    $$=LT.Reference(*$1,address);
   } 
 data_definition:
   HEX HEXLIT 
-  {tfs << endl << "#022 data_definition -> HEX HEXLIT(" << (*$2) << ")"; 
+  {tfs << endl << "#025 data_definition -> HEX HEXLIT(" << (*$2) << ")"; 
    tfs << endl << (*$2) << "=" << hextoint(*$2) << " decimal";
    Memory[address]=hextoint(*$2);
   } 

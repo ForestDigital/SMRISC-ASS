@@ -1,8 +1,0 @@
-    LOAD    num1
-    ADD     num2
-    STORE   result
-    PUT     30
-    CLEAR   10
-num1, HEX   3
-num2, HEX   5
-result, HEX 0

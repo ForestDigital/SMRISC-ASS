@@ -56,12 +56,13 @@ extern int yydebug;
     SUBT = 266,
     PUT = 267,
     CLEAR = 268,
-    HEX = 269,
-    ORG = 270,
-    REGULAR_EXPRESSIONS = 271,
-    IDENTIFIER = 272,
-    HEXLIT = 273,
-    TOKEN_END = 274
+    AltC = 269,
+    HEX = 270,
+    ORG = 271,
+    REGULAR_EXPRESSIONS = 272,
+    IDENTIFIER = 273,
+    HEXLIT = 274,
+    TOKEN_END = 275
   };
 #endif
 /* Tokens.  */
@@ -76,12 +77,13 @@ extern int yydebug;
 #define SUBT 266
 #define PUT 267
 #define CLEAR 268
-#define HEX 269
-#define ORG 270
-#define REGULAR_EXPRESSIONS 271
-#define IDENTIFIER 272
-#define HEXLIT 273
-#define TOKEN_END 274
+#define AltC 269
+#define HEX 270
+#define ORG 271
+#define REGULAR_EXPRESSIONS 272
+#define IDENTIFIER 273
+#define HEXLIT 274
+#define TOKEN_END 275
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -93,7 +95,7 @@ union YYSTYPE
   string* token;
   unsigned short integer;
 
-#line 97 "y.tab.h" /* yacc.c:1909  */
+#line 99 "y.tab.h" /* yacc.c:1909  */
 };
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1

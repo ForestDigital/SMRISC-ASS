@@ -34,7 +34,7 @@ ofstream tfs;                     //trace file stream
 struct BadSuffixException {
     BadSuffixException(char* fn)
     {   cout << endl;
-        cout << "Input file \"" << fn << "\" does not have a .mas suffix.";
+        cout << "Input file \"" << fn << "\" does not have a .sma suffix.";
     }
 };
 //--------------------------------------------------------------------
@@ -43,7 +43,7 @@ class FileNameSuffix {
     char* prefix;
 public:
     FileNameSuffix(char* fn)
-    {   char* p=strstr(fn,".mas");
+    {   char* p=strstr(fn,".sma");
         if (!p) throw BadSuffixException(fn);
         int n=p-fn;
         if (n+4!=strlen(fn)) throw BadSuffixException(fn);

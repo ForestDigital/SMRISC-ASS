@@ -75,6 +75,7 @@ struct BadCharacterException{
 [0-9a-fA-F]+                         return TokenMgr(HEXLIT);
 [\/][^\n]*[\n]                       ;
 ","                                  return TokenMgr(COMMA);
+"AltC"                               return TokenMgr(AltC);
 .                                    {throw BadCharacterException
                                               (*yytext
                                               ,line
@@ -128,7 +129,7 @@ int TokenMgr(int t)
 //--------------------------------------------------------------------
 Lexer::Lexer(FILE* i) 
 {   yyin=i; 
-    const int MAXSY=17;
+    const int MAXSY=18;
     static string sy[]=
     { "TOKEN_BEGIN"
     , "COMMA"
@@ -141,6 +142,7 @@ Lexer::Lexer(FILE* i)
     , "SUBT"
     , "PUT"
     , "CLEAR"
+    , "AltC"
     , "HEX"
     , "ORG"
     , "REGULAR_EXPRESSIONS"
@@ -159,7 +161,8 @@ Lexer::Lexer(FILE* i)
     ,"add"
     ,"subt"         
     ,"put"  
-    ,"clear"  
+    ,"clear"
+    ,"altc"  
     ,"hex"
     ,"org"
     };
@@ -172,11 +175,12 @@ Lexer::Lexer(FILE* i)
     , ADD      
     , SUBT        
     , PUT       
-    , CLEAR       
+    , CLEAR  
+    , AltC     
     , HEX
     , ORG        
     };
-    for (int a=0;a<10;a++) RW[rw[a]]=tc[a];
+    for (int a=0;a<11;a++) RW[rw[a]]=tc[a];
 }
 //--------------------------------------------------------------------
 //Function Lex calls yylex
