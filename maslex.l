@@ -129,7 +129,11 @@ int TokenMgr(int t)
 //--------------------------------------------------------------------
 Lexer::Lexer(FILE* i) 
 {   yyin=i; 
+<<<<<<< HEAD
     const int MAXSY=18;
+=======
+    const int MAXSY=17;
+>>>>>>> fc8f0b55eb37e2c23ca277d7e15003d63ca3d12f
     static string sy[]=
     { "TOKEN_BEGIN"
     , "COMMA"
@@ -180,7 +184,11 @@ Lexer::Lexer(FILE* i)
     , HEX
     , ORG        
     };
+<<<<<<< HEAD
     for (int a=0;a<11;a++) RW[rw[a]]=tc[a];
+=======
+    for (int a=0;a<10;a++) RW[rw[a]]=tc[a];
+>>>>>>> fc8f0b55eb37e2c23ca277d7e15003d63ca3d12f
 }
 //--------------------------------------------------------------------
 //Function Lex calls yylex

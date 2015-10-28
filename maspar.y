@@ -44,7 +44,11 @@ extern int col;
 //---------------------------------------------------------------------
 int address=0;               //Address of the next instruction
 int initialaddress=0;        //Address of the first instruction
+<<<<<<< HEAD
 int Memory[256];            //SMRISC's memory
+=======
+int Memory[256];            //MARIE's memory
+>>>>>>> fc8f0b55eb37e2c23ca277d7e15003d63ca3d12f
 Label LT;                    //Label Table for resolving the addresses of labels
 //---------------------------------------------------------------------
 %}
@@ -183,6 +187,7 @@ instruction:
    Memory[address]=operation;
   } 
 instruction:
+<<<<<<< HEAD
   PUT AltC
   {tfs << endl << "#019 instruction -> PUT AltC"; 
    unsigned short operation=op_puta;
@@ -203,13 +208,25 @@ instruction:
   {tfs << endl << "#021 instruction -> CLEAR AltC"; 
    unsigned short operation=op_cleara;
    tfs << endl << "instruction=" << setw(4) << hex << operation;
+=======
+  PUT operand
+  {tfs << endl << "#018 instruction -> PUT operand"; 
+   unsigned short operation=op_put|($2);
+   tfs << endl << "instruction=" << setw(4) << hex << operation;
+>>>>>>> fc8f0b55eb37e2c23ca277d7e15003d63ca3d12f
    tfs << dec;
    Memory[address]=operation;
   }
 instruction:
+<<<<<<< HEAD
   CLEAR 
   {tfs << endl << "#022 instruction -> CLEAR"; 
    unsigned short operation=op_clear;
+=======
+  CLEAR operand
+  {tfs << endl << "#019 instruction -> CLEAR operand"; 
+   unsigned short operation=op_clear|($2);
+>>>>>>> fc8f0b55eb37e2c23ca277d7e15003d63ca3d12f
    tfs << endl << "instruction=" << setw(4) << hex << operation;
    tfs << dec;
    Memory[address]=operation;
